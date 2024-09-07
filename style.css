@@ -1,0 +1,133 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+.container {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    width: 300px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+
+    .container {
+        width: 400px;
+        margin: 0 auto;
+    }
+
+    img {
+        width: 200px;
+        /* Ajuste o tamanho da logo conforme necessário */
+        height: auto;
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Footer exclusivo */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #fff;
+    font-size: 12px;
+    width: 100%; /* Garante que o footer ocupe toda a largura */
+    position: fixed; /* Mantém o footer fixo na parte inferior */
+    bottom: 0;
+    left: 0;
+    margin-top: auto; /* Garante que o footer seja empurrado para o final */
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+}
+
+/*segunda pagina*/
+
+.topoPagina {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.topoPagina nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav {
+    display: flex;
+    /* Transforma o nav em um container flexbox */
+    align-items: center;
+    /* Alinha os itens verticalmente ao centro */
+}
+
+header nav img {
+    width: 200px; /* Ajuste o tamanho da logo conforme necessário */
+    height: auto;
+}
+
+header nav ul {
+    list-style: none;
+    /* Remove os marcadores da lista */
+    display: flex;
+    /* Transforma a ul em um container flexbox */
+}
+
+header nav ul li {
+    margin: 0 10px;
+    /* Adiciona margem entre os itens */
+}
+
+header nav ul li a {
+    font-weight: normal;
+    /* Deixa a fonte em negrito */
+    color: rgb(46, 46, 38);
+    /* Muda a cor da fonte para amarelo */
+    text-decoration: none;
+}
+
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Pesquisa</title>
+    <link rel="stylesheet" href="pesquisa.css">
+</head>
+<body>
+
+    <header>
+        <a href="menu.html">
+            <img src="Imagens/Logo_CartoAR.png" alt="Logo_CartoAR">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="#" id="btnAbrirModal">Pesquisar</a></li>
+                <li><a href="#">Impressão</a></li>
+                <li><a href="Index.html">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Modal de Pesquisa -->
+    <div id="modalPesquisa" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Pesquisar por CPF, CNPJ ou Nome</h2>
+            <form id="formPesquisa">
+                <label for="cpfCnpj">CPF ou CNPJ:</label>
+                <input type="text" id="cpfCnpj" name="cpfCnpj" placeholder="Insira o CPF ou CNPJ">
+                
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Insira o nome">
+                
+                <button type="submit">Pesquisar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Resultados da Pesquisa -->
+    <div id="resultadosPesquisa">
+        <h2>Resultados da Pesquisa</h2>
+        <ul id="listaResultados">
+            <!-- Resultados da pesquisa serão inseridos aqui dinamicamente -->
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+
+    <footer>
+        <p>Nome da Empresa</p>
+        <p>Copyright © 2024 - Todos os Direitos Reservados</p>
+        <a href="https://www.youtube.com/@cartoriofacil" target="_blank">Cartório Fácil</a>
+    </footer>
+
+</body>
+</html>

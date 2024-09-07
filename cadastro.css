@@ -1,0 +1,147 @@
+/* Container exclusivo da página de cadastro */
+
+/* Header fixo exclusivo do cadastro */
+header {
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+    padding: 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: left; /* Ajusta o espaço entre o logo e o menu */
+    align-items: stretch;
+}
+
+header nav {
+    display: flex;
+    gap: 20px; /* Espaçamento entre os itens do menu */
+    align-items: center;
+}
+
+header img {
+    width: 200px; /* Ajuste o tamanho da logo conforme necessário */
+    height: auto;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Espaçamento entre os links */
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0;
+}
+
+header nav ul li a {
+    
+    font-weight: normal;
+    color: rgb(46, 46, 38);
+    text-decoration: none;
+}
+
+
+#cadastro-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 125px; /* Compensa o header fixo */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Layout do formulário usando grid */
+#cadastro-container form {
+    display: grid;
+    grid-template-columns: 150px 1fr; /* Aproxima os labels e inputs com 2 colunas */
+    gap: 10px 20px; /* Define um pequeno espaçamento entre colunas */
+    width: 100%; /* Faz o formulário ocupar toda a largura disponível no container */
+}
+
+#cadastro-container label {
+    font-size: 14px;
+    text-align: right;
+    padding-right: 10px; /* Aproxima o label do input */
+}
+
+#cadastro-container input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+    width: 85%; /* Faz o input ocupar 100% da coluna de inputs */
+}
+
+/* Botões específicos */
+#cadastro-container .button-group {
+    grid-column: span 2;
+    display: flex;
+    justify-content: space-between; /* Distribui os botões em uma linha */
+    gap: 5px; /* Espaçamento entre os botões */
+}
+
+#cadastro-container button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    min-width: 80px; /* Define uma largura mínima para os botões */
+}
+
+#cadastro-container button:hover {
+    background-color: #45a049;
+}
+
+/* Footer exclusivo */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #fff;
+    font-size: 12px;
+    width: 100%; /* Garante que o footer ocupe toda a largura */
+    position: fixed; /* Mantém o footer fixo na parte inferior */
+    bottom: 0;
+    left: 0;
+    margin-top: auto; /* Garante que o footer seja empurrado para o final */
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #cadastro-container {
+        width: 100%;
+    }
+
+    #cadastro-container form {
+        grid-template-columns: 1fr; /* Cada item ocupa uma linha inteira em telas pequenas */
+    }
+
+    #cadastro-container .button-group {
+        flex-direction: column; /* Empilha os botões em telas pequenas */
+    }
+
+    #cadastro-container button {
+        width: 100%; /* Botões ocupam 100% da largura da tela em dispositivos móveis */
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
